@@ -1,0 +1,51 @@
+/* AgriSmart : charte graphique
+   Vert feuille #2C7A46 (croissance) · Vert forêt #17352A (sérieux) · Ocre #E3A72F (soleil, récolte) · Sable #F4F1E8 (clarté) */
+:root {
+    --as-leaf: #2C7A46;
+    --as-forest: #17352A;
+    --as-ochre: #E3A72F;
+    --as-sand: #F4F1E8;
+    --bs-primary: #2C7A46;
+    --bs-primary-rgb: 44, 122, 70;
+    --bs-link-color: #2C7A46;
+    --bs-link-hover-color: #17352A;
+    --bs-body-font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+body { background: var(--as-sand); color: #1f2a24; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+.text-primary { color: var(--as-leaf) !important; }
+.bg-primary { background-color: var(--as-leaf) !important; }
+.bg-forest { background-color: var(--as-forest) !important; color: #fff; }
+.text-ochre { color: var(--as-ochre) !important; }
+.btn-primary { --bs-btn-bg: #2C7A46; --bs-btn-border-color: #2C7A46; --bs-btn-hover-bg: #17352A; --bs-btn-hover-border-color: #17352A;
+               --bs-btn-active-bg: #17352A; --bs-btn-active-border-color: #17352A; }
+.btn-outline-primary { --bs-btn-color: #2C7A46; --bs-btn-border-color: #2C7A46; --bs-btn-hover-bg: #2C7A46; --bs-btn-hover-border-color: #2C7A46;
+                       --bs-btn-active-bg: #2C7A46; --bs-btn-active-border-color: #2C7A46; }
+.btn-ochre { background: var(--as-ochre); border-color: var(--as-ochre); color: #17352A; font-weight: 600; }
+.btn-ochre:hover { background: #cf931a; border-color: #cf931a; color: #17352A; }
+
+/* Navbar : lien actif */
+.navbar .nav-link { font-weight: 500; padding: 1.1rem 1rem; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--as-leaf); }
+.navbar .nav-link.active { box-shadow: inset 0 -3px 0 var(--as-leaf); }
+
+/* Cartes */
+.card { border: 0; border-radius: 16px; box-shadow: 0 2px 12px rgba(23, 53, 42, .08); }
+.stat-card .icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+                   background: rgba(44, 122, 70, .12); color: var(--as-leaf); font-size: 1.6rem; }
+.form-control:focus, .form-select:focus { border-color: var(--as-leaf); box-shadow: 0 0 0 .2rem rgba(44, 122, 70, .2); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--as-forest) 0%, #20513c 100%); color: #fff; padding: 6rem 0; border-radius: 0 0 40px 40px; }
+.hero .tagline { color: var(--as-ochre); font-weight: 600; }
+.step-number { width: 44px; height: 44px; border-radius: 50%; background: var(--as-leaf); color: #fff; font-weight: 700;
+               display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* Footer, retour en haut, spinner */
+.footer .btn-link { display: block; padding: 0; text-align: left; color: rgba(255, 255, 255, .6); text-decoration: none; }
+.footer .btn-link:hover { color: #fff; }
+.btn-lg-square { width: 48px; height: 48px; padding: 0; align-items: center; justify-content: center; }
+.back-to-top { position: fixed; display: none; right: 30px; bottom: 30px; z-index: 99; border-radius: 50%; }
+#spinner { opacity: 0; visibility: hidden; transition: opacity .4s ease-out, visibility 0s linear .4s; z-index: 99999; }
+#spinner.show { transition: opacity .4s ease-out, visibility 0s linear 0s; visibility: visible; opacity: 1; }
