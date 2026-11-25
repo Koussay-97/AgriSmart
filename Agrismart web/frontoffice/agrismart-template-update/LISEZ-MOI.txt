@@ -1,0 +1,8 @@
+MISE A JOUR : template eLEARNING dans le Front Office
+=====================================================
+1. Fermez l'éditeur ou faites un commit de votre travail avant de copier (pour pouvoir revenir en arrière).
+2. Copiez le CONTENU du dossier "frontoffice" de cette archive dans le dossier "frontoffice" de votre projet,
+   et acceptez de REMPLACER les fichiers existants (css, js, views).
+   -> Les contrôleurs, index.php, helpers.php et js/validate.js ne sont PAS dans l'archive : ils restent intacts.
+3. Lancez MySQL (XAMPP), puis :  cd frontoffice && php -S localhost:8000
+4. Ouvrez http://localhost:8000/index.php?page=home  (faites Ctrl+F5 pour vider le cache du navigateur).
